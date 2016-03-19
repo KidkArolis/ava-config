@@ -1,11 +1,15 @@
 {
   "name": "ava-config",
   "version": "1.0.0",
-  "description": "Configure `config` module for your `ava` tests",
+  "description": "Configure config module for your ava tests",
   "main": "index.js",
   "scripts": {
     "test": "standard",
     "release": "release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KidkArolis/ava-config.git"
   },
   "author": "Karolis Narkevicius",
   "license": "ISC",
