@@ -1,3 +1,4 @@
+
 var fs = require('fs')
 var path = require('path')
 
@@ -20,13 +21,16 @@ function isRoot (dirname) {
   return path.resolve(dirname, '..') === dirname
 }
 
-var configDir = closest(__dirname, 'config/default.yml')
+//start 2 folders up from dirname (which points the ava-config module itself) to avoid looking inside node_modules and finding another folder called config
+var configDir = closest(path.join(__dirname, '../..'), 'config')
 
 if (!configDir.found) {
   console.error('ava-config could not find the config dir.')
   console.error('Paths checked:')
   console.error(configDir.pathsChecked)
   process.exit(1)
+}else{
+    console.log('Found config dir : ', configDir.path)
 }
 
 process.env.NODE_ENV = 'test'
