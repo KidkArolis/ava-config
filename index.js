@@ -29,8 +29,6 @@ if (!configDir.found) {
   console.error('Paths checked:')
   console.error(configDir.pathsChecked)
   process.exit(1)
-}else{
-    console.log('Found config dir : ', configDir.path)
 }
 
 process.env.NODE_ENV = 'test'
